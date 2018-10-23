@@ -7,8 +7,8 @@ from django.conf import settings
 from django.contrib.auth.models import Permission
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
-from django.db.models import permalink
 from django.db.models.signals import post_save
+from django.urls import reverse
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 from sorl.thumbnail import ImageField, get_thumbnail
@@ -53,9 +53,8 @@ class BaseImage(models.Model):
     def __str__(self):
         return '%s' % self.id
 
-    @permalink
     def get_absolute_url(self):
-        return 'imagestore:image', (), {'pk': self.id}
+        return reverse('imagestore:image', args={'pk': self.id})
 
     def admin_thumbnail(self):
         try:

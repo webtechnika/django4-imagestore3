@@ -5,7 +5,8 @@ import logging.config
 import swapper
 from django.conf import settings
 from django.db import models
-from django.db.models import permalink
+# from django.db.models import permalink
+from django.urls import reverse
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 from sorl.thumbnail import get_thumbnail
@@ -44,9 +45,8 @@ class BaseAlbum(models.Model):
     def __str__(self):
         return self.name
 
-    @permalink
     def get_absolute_url(self):
-        return 'imagestore:album', (), {'album_id': self.id}
+        return reverse('imagestore:album', args={'album_id': self.id})
 
     def admin_thumbnail(self):
         img = self.get_head()
