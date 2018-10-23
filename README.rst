@@ -1,3 +1,9 @@
+Fork
+==========
+
+Updated version of imagestore, working with Django 2.1.2 and Python 3.6, currently tested Album/Image uploading and bulk upload of zip file.
+Please feel free to contact me if you find something wrong. przemyslaw@webtechnika.pl
+
 ImageStore
 ==========
 
