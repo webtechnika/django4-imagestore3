@@ -29,6 +29,7 @@ class Migration(migrations.Migration):
                 ('is_public', models.BooleanField(default=True, verbose_name='Is public')),
                 ('order', models.IntegerField(default=0, verbose_name='Order')),
                 ('user', models.ForeignKey(related_name='albums', verbose_name='User', blank=True, to=settings.AUTH_USER_MODEL, null=True, on_delete=models.CASCADE)),
+                ('brief', models.CharField(default='', help_text='Short description', max_length=255, verbose_name='Brief', blank=True)),
             ],
             options={
                 'ordering': ('order', 'created', 'name'),
