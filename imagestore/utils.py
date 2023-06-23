@@ -2,10 +2,8 @@
 from __future__ import unicode_literals
 import os
 import uuid
-import logging
 import logging.config
 from importlib import import_module
-from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
 from django.utils.deconstruct import deconstructible
 from django.utils.encoding import force_text
