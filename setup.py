@@ -10,12 +10,12 @@ setup(
     packages=find_packages(),
     install_requires=[
         'django',
+        'six',
         'pillow',
         'sorl-thumbnail',
         'django-autocomplete-light',
         'django-tagging',
         'swapper',
-        'six',
     ],
     author='Pavel Zhukov',
     author_email='gelios@gmail.com',
