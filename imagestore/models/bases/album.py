@@ -8,7 +8,7 @@ from django.db import models
 # from django.db.models import permalink
 from django.urls import reverse
 from six import python_2_unicode_compatible
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from sorl.thumbnail import get_thumbnail
 from sorl.thumbnail.helpers import ThumbnailError
 
