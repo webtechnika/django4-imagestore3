@@ -14,7 +14,7 @@ setup(
         'pillow',
         'sorl-thumbnail',
         'django-autocomplete-light',
-        'git+https://github.com/webtechnika/django-tagging.git',
+        'django-tagging @ git+https://github.com/webtechnika/django-tagging.git',
         'swapper',
     ],
     author='Pavel Zhukov',
